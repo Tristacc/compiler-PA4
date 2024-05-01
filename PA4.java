@@ -7,22 +7,22 @@ public class PA4 implements PA4Constants {
   public static void main(String args[]) {
     PA4 t = new PA4(System.in);
     try {
-
-     Program n = t.Start();
+      Program n = t.Start();
+ /*
      System.out.println("\n\nPretty Printing the Abstract Syntax Tree");
      Visitor v1 = new AST_Visitor();  // pretty prints the Abstract Syntax Tree
      n.accept(v1, 0);
+*/
 
-
-/* uncomment this only for PA4b 
+/*
       System.out.println("\n\nPretty Print the Program");
       Visitor v2 = new PP_Visitor();  // pretty prints the MiniC program
       String s = (String) n.accept(v2, 0);
       //System.out.println("#include <stdio.h>\n#include <stdbool.h>\nvoid print(int n){printf(\"%10d\\n\",n);}");
       System.out.println(s);
+
 */
 
-/* uncomment this only for PA4c and PA4d */
       System.out.println("\n\nGenerating Symbol Table");
       SymbolTableVisitor v3 = new SymbolTableVisitor(); // generates a SymbolTable
       SymbolTable st = v3.symbolTable;
@@ -30,7 +30,7 @@ public class PA4 implements PA4Constants {
       System.out.println(st);
 
 
-/* uncomment this only for PA4d */
+
       System.out.println("\n\nType Checking");
       TypeCheckingVisitor v4 = new TypeCheckingVisitor(st);
       n.accept(v4,"");

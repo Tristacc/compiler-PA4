@@ -8,11 +8,11 @@
  * all of the expressions are available except for && 
  * that is <, +,-,*  integerLiterals and IdentifierExpressions
  * Video_a1: https://brandeis.zoom.us/rec/share/TTLuB_Vq6tjp6Xkvepn7s_bvFlphDYYSbmdpg_jOG2JhZ4M-itF9XRIkawdg-zK5.tct4_vCAbx9Lb7Vs?startTime=1714535237000
- * Video_a2: 
- * Video_b1: 
- * Video_b2: 
- * Video_c1: 
- * Video_c2: 
+ * Video_a2: https://brandeis.zoom.us/rec/share/kzHfPGdtgPiM_p3F6gcwB-r94C9GunV0Zp_SFVExh4QMvu6voRANsH_cnZOcCJBF.MWhRNs6l9NZqwfBv?startTime=1714538431000
+ * Video_b1: https://brandeis.zoom.us/rec/share/SvCVugd_KWhaTnOEqRZc5fhaL1_IGwK4ei7OWHG7EycHVyhALYAmuHvDlWXieSR8.p8Vz4xdH0EtzIaoI?startTime=1714540311000
+ * Video_b2: https://brandeis.zoom.us/rec/share/aJLBzkFc6kqJ4e5IqGnElnUf3gw5xfhVHA3PMIoeuMAVqyHCd1k0SJu1eiaPzn0s.l8QPa-zTkrvoH1DK?startTime=1714539119000
+ * Video_c1: https://brandeis.zoom.us/rec/share/6glHoZexZ9Gp3TM-xYPWMv8fQZVu876YC_UjsH0oHOybQJZYfAQsveJFdnTnsp_S.D-3yxP8dDbvKgG1j?startTime=1714540791000
+ * Video_c2: https://brandeis.zoom.us/rec/share/QMspRcDqe7dJdo2PyZlKJfOL8xUb7EiL7Cu2Zhx2qsJpaubLAZsfcFO_xKjj_yks.drHshEQlw_2OA1QY?startTime=1714542524000
  * Video_d1: 
  * Video_d2: 
  */
@@ -30,22 +30,22 @@ public class PA4 {
   public static void main(String args[]) {
     PA4 t = new PA4(System.in);
     try {
- 
-     Program n = t.Start(); 
+      Program n = t.Start(); 
+ /*
      System.out.println("\n\nPretty Printing the Abstract Syntax Tree");
      Visitor v1 = new AST_Visitor();  // pretty prints the Abstract Syntax Tree
      n.accept(v1, 0);
+*/
 
-
-/* uncomment this only for PA4b 
+/*
       System.out.println("\n\nPretty Print the Program");
       Visitor v2 = new PP_Visitor();  // pretty prints the MiniC program
       String s = (String) n.accept(v2, 0);
       //System.out.println("#include <stdio.h>\n#include <stdbool.h>\nvoid print(int n){printf(\"%10d\\n\",n);}");
       System.out.println(s);
+
 */
 
-/* uncomment this only for PA4c and PA4d */ 
       System.out.println("\n\nGenerating Symbol Table");
       SymbolTableVisitor v3 = new SymbolTableVisitor(); // generates a SymbolTable
       SymbolTable st = v3.symbolTable;
@@ -53,7 +53,7 @@ public class PA4 {
       System.out.println(st);
 
 
-/* uncomment this only for PA4d */
+
       System.out.println("\n\nType Checking");
       TypeCheckingVisitor v4 = new TypeCheckingVisitor(st);
       n.accept(v4,"");
