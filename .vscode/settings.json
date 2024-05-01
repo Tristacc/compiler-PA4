@@ -1,0 +1,5 @@
+{
+    "java.configuration.runtimes": [],
+    "java.configuration.detectJdksAtStart": true,
+    "java.home": "/Library/Java/JavaVirtualMachines/openjdk-18.0.2.1/Contents/Home",
+}
